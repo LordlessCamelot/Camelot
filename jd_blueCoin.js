@@ -1,5 +1,5 @@
 /*
-东东超市兑换奖品 脚本地址：https://raw.githubusercontent.com/KingRan/JDJB/main/jd_blueCoin.js
+东东超市兑换奖品
 感谢@yangtingxiao提供PR
 更新时间：2021-6-7
 活动入口：京东APP我的-更多工具-东东超市
