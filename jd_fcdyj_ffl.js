@@ -1,7 +1,7 @@
 /*
 [task_local]
 #发财大赢家-翻翻乐
-1 0-23/1 * * * jd_fcffl.js, tag=发财大赢家-翻翻乐, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
+1 0-23/1 * * * jd_fcdyj_ffl.js, tag=发财大赢家-翻翻乐, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
 */
 const $ = new Env('发财大赢家-翻翻乐');
 //Node.js用户请在jdCookie.js处填写京东ck;
