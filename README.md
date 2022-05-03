@@ -1,9 +1,9 @@
-# Camelot
-> * 自用  
-> * 请勿使用  
-> * 请勿传播
+# Kiara
+### 说明：
+* 自用
+* 仅用于收集一些特殊脚本
+* 请勿使用
+* 请勿传播
 
-# **拉库**
- ```
- ql repo https://github.com/LordlessCamelot/Camelot.git "jd_|jx_|jdCookie" "activity|backUp" "^jd[^_]|USER|magic|utils|function|sign|sendNotify|ql|JDJR"
- ```
+### 拉库：  
+ql repo https://github.com/LordlessCamelot/Kiara.git "jd_|jx_" "activity|backUp" "^jd[^_]|USER|jdCookie|magic|utils|function|sign|sendNotify|ql|JDJR"
