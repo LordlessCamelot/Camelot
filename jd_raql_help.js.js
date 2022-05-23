@@ -4,7 +4,7 @@
 */
 
 const CryptoJS = require("crypto-js");
-const $ = new Env('热爱奇旅');
+const $ = new Env('热爱奇旅互助');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
 let cookiesArr = [], cookie = '', message, helpCodeArr = [], helpPinArr = [], wxCookie = "";
