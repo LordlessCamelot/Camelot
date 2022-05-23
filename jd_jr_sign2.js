@@ -4,6 +4,8 @@ Last Modified time: 2020-11-20 14:11:01
 特殊说明：偷ck的哦
 提示：领取奖励需要先京东签到下
 已支持IOS双京东账号,Node.js支持N个京东账号
+const $ = new Env('京东金融-双签')
+
 脚本兼容: QuantumultX, Surge, Loon, JSBox, Node.js
 ============Quantumultx===============
 [task_local]

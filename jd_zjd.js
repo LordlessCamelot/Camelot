@@ -1,6 +1,7 @@
 /*
 作者：小手冰凉
 export zjd_num='' 默认8
+const $ = new Env('赚京豆')
 [task_local]
 #赚京豆
 10 0-4 * * * jd_zjd.js, tag=赚京豆
