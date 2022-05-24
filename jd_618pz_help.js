@@ -1,21 +1,23 @@
-//脚本来自主任。请勿传播
-//30 20 * * * jd_618pz.js
-//脚本仅限个人学习使用，禁止传播 来自网络资源
-const $ = new Env('热爱膨胀');
+/*
+11 8 * * * jd_618PZ_help.js
 
+变量：
+export PZ="助力码"
+*/
+
+const $ = new Env('热爱奇旅膨胀内部互助');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
-
-
 let cookiesArr = [], cookie = '', message;
 let secretp='',inviteId=[]
 let helpnum=3;
 //助力码
-let inviteId1='PKASTT0205KkcA2dzsz2scVii_YptCTdWmYaRzTQjeQOc';
+let inviteId1='';
 
 if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
     cookiesArr.push(jdCookieNode[item])
   })
+  if (process.env.PZ) inviteId1 = process.env.PZ
   if (process.env.JD_DEBUG && process.env.JD_DEBUG === 'false') console.log = () => {};
 } else {
   cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
@@ -29,7 +31,7 @@ $.inviteId.push(inviteId1);
     $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
     return;
   }
-  
+  console.log(`\n变量：export PZ="助力码"`);
   $.inviteIdCodesArr = {}
   for (let i = 0; i < cookiesArr.length && true; i++) {
     if (cookiesArr[i]) {
@@ -39,14 +41,6 @@ $.inviteId.push(inviteId1);
       await getUA()
     }
   }
-
-  
-
-
-
-
-
-
   for (let m = 0; m < cookiesArr.length; m++) {
     cookie = cookiesArr[m];
     $.index = m + 1;
@@ -82,9 +76,6 @@ $.inviteId.push(inviteId1);
 
   }
 
-
-
-
 })()
   .catch((e) => {
     $.log('', `❌ ${$.name}, 失败! 原因: ${e}!`, '')
@@ -93,16 +84,7 @@ $.inviteId.push(inviteId1);
     $.done();
   })
 
-
-
-
-
-
-
-
-
-
-  function get_secretp() {
+function get_secretp() {
     let body = {};
     return new Promise((resolve) => {
         $.post(taskPostUrl("promote_getHomeData", body), async(err, resp, data) => {
@@ -133,8 +115,6 @@ $.inviteId.push(inviteId1);
         })
     })
 }
-
-
 
 
 function travel_gethelp(){
@@ -169,8 +149,6 @@ function travel_gethelp(){
     })
 	})
 }
-
-
 
 function travel_help(inviteId){
 	//let body={"taskId":taskId,"taskToken":taskToken,"actionType":1,"ss":{"extraData":{"log":"","sceneid":"ZNSZLh5"},"secretp":secretp,"random":randomString(6)}};
@@ -231,8 +209,6 @@ function qryViewkitCallbackResult(taskToken){
     })
 	})
 }
-
-
 
 function taskPostUrl(functionId, body) {
   return {
