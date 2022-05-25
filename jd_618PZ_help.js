@@ -60,7 +60,6 @@ $.inviteId.push(inviteId1);
     
         }catch(e){
           $.log('', `❌ ${$.name}, 失败! 原因: ${e}!`, '')
-        }
     await get_secretp()
     let result = await travel_help($.inviteId[j])
     if (result.data.bizMsg=='TA已经获得足够的助力了,不需要助力啦~'）{
