@@ -57,7 +57,7 @@ $.inviteId.push(inviteId1);
         try {
           await get_secretp()
           let result = await travel_help($.inviteId[j])
-          if (result.data.bizMsg=='TA已经获得足够的助力了,不需要助力啦~'）{
+          if (result.data.bizMsg=='TA已经获得足够的助力了,不需要助力啦~') {
             console.log('助力已满，停止');
             return
           } 
