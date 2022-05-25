@@ -2,7 +2,7 @@
 30 20 * * * jd_618PZ_help.js
 
 变量：
-export Love_PZ="助力码"
+export PZ="助力码"
 */
 
 const $ = new Env('热爱奇旅膨胀内部互助');
@@ -17,7 +17,7 @@ if ($.isNode()) {
   Object.keys(jdCookieNode).forEach((item) => {
     cookiesArr.push(jdCookieNode[item])
   })
-  if (process.env.Love_PZ) inviteId1 = process.env.Love_PZ
+  if (process.env.PZ) inviteId1 = process.env.PZ
   if (process.env.JD_DEBUG && process.env.JD_DEBUG === 'false') console.log = () => {};
 } else {
   cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
@@ -31,7 +31,7 @@ $.inviteId.push(inviteId1);
     $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
     return;
   }
-  console.log(`\n变量：export Love_PZ="助力码"`);
+  console.log(`\n变量：export PZ="助力码"`);
   $.inviteIdCodesArr = {}
   for (let i = 0; i < cookiesArr.length && true; i++) {
     if (cookiesArr[i]) {
