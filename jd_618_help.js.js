@@ -1,6 +1,6 @@
 /*
 搬自主任
-30 9 * * * jd_raql_help.js
+30 9 * * * jd_618_help.js
 */
 
 const CryptoJS = require("crypto-js");
