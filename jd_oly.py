@@ -11,7 +11,7 @@ from functools import partial
 print = partial(print, flush=True)
 
 activatname = '欧莱雅-用对心只对你'
-shareOpenId = 'ER7H6c62EYmTTuQKgpxV6aygi-zfSEO6oSMc40PpndcER7H6c62EYmTTuQKgpxV6aygi-zfSEO6oSMc40Ppndc'
+shareOpenId = 'ER7H6c62EYmTTuQKgpxV6aygi-zfSEO6oSMc40Ppndc'
 shopid = '1000002662'
 activityId = '2396254'
 activityUrl = f'https://hd-zex-isv.isvjcloud.com/zex-jd-web/newJD/loreal18/index.html?brand=5012622631&campaignId=718&shareOpenId={shareOpenId}&ruleId=476&shopId={shopid}&activityId={activityId}'
