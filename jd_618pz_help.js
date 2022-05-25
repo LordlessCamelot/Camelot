@@ -1,5 +1,5 @@
 /*
-11 8 * * * jd_618PZ_help.js
+30 20 * * * jd_618PZ_help.js
 
 变量：
 export PZ="助力码"
