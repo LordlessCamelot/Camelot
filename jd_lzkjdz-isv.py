@@ -1,5 +1,6 @@
 # cretre by doubi 
 # 通用模板
+# new Env('邀新助力赢好礼')
 
 import asyncio
 from time import time
