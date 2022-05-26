@@ -1,4 +1,5 @@
 # cretre by doubi
+# new Env('欧莱雅-用对心只对你')
 # 欧莱雅日常活动
 
 import asyncio
