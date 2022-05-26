@@ -10,8 +10,8 @@ from functools import partial
 print = partial(print, flush=True)
 
 activatname = '邀新助力赢好礼'
-helpNickName = 'Didiheyh'
-helpUuid = '2fe7f41ef9454626b11e783c935a625d' # 助力码
+helpNickName = 'LordlessCamelot'
+helpUuid = '7d9fd9cc161e4c468eb2db01b4400d8f' # 助力码
 activityUrl = f'https://lzkjdz-isv.isvjcloud.com/m/1000411104/99/2205100041110402/?activityId=2205100041110402&helpUuid={helpUuid}&helpNickName={helpNickName}'
 shopid = '1000411104'
 
