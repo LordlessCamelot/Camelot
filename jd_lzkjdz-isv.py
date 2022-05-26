@@ -5,6 +5,9 @@ import asyncio
 from time import time
 import requests,json,random,os
 from urllib.parse import quote_plus, unquote_plus
+from functools import partial
+
+print = partial(print, flush=True)
 
 activatname = '邀新助力赢好礼'
 helpNickName = 'Didiheyh'
