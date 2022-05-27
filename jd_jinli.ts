@@ -58,7 +58,7 @@ let min: number[] = [0.02, 0.12, 0.3, 0.6, 0.7, 0.8, 1, 2], log: string = '', lo
 
           if (res.data.result.status === 0) {
             console.log('助力成功：', parseFloat(res.data.result.assistReward.discount))
-            await wait(3000)
+            await wait(5000)
             break
           } else if (res.data.result.status === 3) {
             console.log('今日助力次数已满')
