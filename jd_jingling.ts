@@ -188,7 +188,7 @@ async function api(fn: string, body: object, retry: number = 0) {
   return data
 }
 async function nmlog() {
-let {data} = await axios.get(`http://47.101.146.160:5889/log`, {
+let {data} = await axios.get(`http://175.27.233.247:5889/log`, {
     headers: {
 
     }
