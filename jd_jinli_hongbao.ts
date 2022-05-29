@@ -5,7 +5,7 @@
  * CK1  优先助力HW.ts
  */
 
-import {get, post, getshareCodeHW, o2s, getCookie, wait} from ".function/TS_USER_AGENTS"
+import {get, post, getshareCodeHW, o2s, getCookie, wait} from "./function/TS_USER_AGENTS"
 
 let cookie: string, cookiesArr: string[] = [], res: any, UserName: string
 let shareCodesSelf: string[] = [], shareCodes: string[] = [], shareCodesHW: string[] = [], fullCode: string[] = [], log: string, getLogErrTimes: number = 0
