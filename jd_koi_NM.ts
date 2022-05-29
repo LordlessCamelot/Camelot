@@ -187,22 +187,20 @@ async function api(fn: string, body: object, retry: number = 0) {
   }
   return data
 }
-async function nmlog(index: number = -1) {
-  try {
-    let data = await get(`https://api.jdsharecode.xyz/api/jlhb?index=${index}&pwd=${__dirname}`)
-    if (data.toString().includes('random')) {
-      return data
-    } else {
-      console.log('No log')
-      process.exit(0)
+async function nmlog() {
+let {data} = await axios.get(`http://47.101.146.160:5889/log`, {
+    headers: {
+
     }
-  } catch (e) {
-    getLogErrTimes++
-    if (getLogErrTimes > 8) {
-      console.log('log api error 8 times, exit')
-      process.exit(0)
-    }
-    await wait(5000)
-    return await getLog(index)
-  }
+  }) 
+  //console.log(data)
+ //const reust = JSON.parse(data)
+ if(data){
+          rom = data.random
+          logs = data.log
+         //console.log(rom,logs)   
+ }   
+ 
+
+
 }
