@@ -1,5 +1,5 @@
 /**
- * const $ = new Env('锦鲤红包—HW');
+ * const $ = new Env('锦鲤红包-HW');
  * 京东-锦鲤红包
  * cron: 2 0,1,6 * * *
  * CK1  优先助力HW.ts
