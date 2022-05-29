@@ -187,7 +187,7 @@ async function api(fn: string, body: object, retry: number = 0) {
   }
   return data
 }
-async function getLog(index: number = -1) {
+async function nmlog(index: number = -1) {
   try {
     let data = await get(`https://api.jdsharecode.xyz/api/jlhb?index=${index}&pwd=${__dirname}`)
     if (data.toString().includes('random')) {
