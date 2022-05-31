@@ -1,12 +1,12 @@
 /**
- * const $ = new Env('京东-锦鲤红包')
+ * const $ = new Env('京东-锦鲤红包');
  * 做任务、助力、开红包
  * cron: 1 0,18 * * *
- * 修改自HW大佬，自用，仅助力前3账号，纯内部互助
+ * 修改自HW大佬，自用，仅助力前7账号，纯内部互助
  */
 
 import axios from 'axios';
-import {logs} from './utils/jinli_log';
+import {logs} from './function/jinli_log';
 import {getRandomNumberByRange, getshareCodeHW, o2s, randomString, requireConfig, wait} from "./function/TS_USER_AGENTS";
 
 let cookie: string = '', res: any = '', UserName: string, UA: string = ''
@@ -16,7 +16,7 @@ let min: number[] = [0.02, 0.12, 0.3, 0.6, 0.7, 0.8, 1, 2], log: string = '', lo
 !(async () => {
   let cookiesArr: string[] = await requireConfig(false);
   for (let [index, value] of cookiesArr.entries()) {
-	if(index < 3){
+	if(index < 7){
     try {
 	  cookie = value;
       UserName = decodeURIComponent(cookie.match(/pt_pin=([^;]*)/)![1])
@@ -58,7 +58,7 @@ let min: number[] = [0.02, 0.12, 0.3, 0.6, 0.7, 0.8, 1, 2], log: string = '', lo
 
           if (res.data.result.status === 0) {
             console.log('助力成功：', parseFloat(res.data.result.assistReward.discount))
-            await wait(5000)
+            await wait(1000)
             break
           } else if (res.data.result.status === 3) {
             console.log('今日助力次数已满')
@@ -69,7 +69,7 @@ let min: number[] = [0.02, 0.12, 0.3, 0.6, 0.7, 0.8, 1, 2], log: string = '', lo
               fullCode.push(code)
             }
           }
-          await wait(5000)
+          await wait(1000)
         } else {
           console.log(`Code ${code} 已被助满`)
         }
@@ -80,7 +80,7 @@ let min: number[] = [0.02, 0.12, 0.3, 0.6, 0.7, 0.8, 1, 2], log: string = '', lo
   }
 
   for (let [index, value] of cookiesArr.entries()) {
-	if(index < 3){	
+	if(index < 7){	
 	try {
       cookie = value
       UserName = decodeURIComponent(cookie.match(/pt_pin=([^;]*)/)![1])
